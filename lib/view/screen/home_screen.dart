@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
+
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:quote_app/view/screen/quotes_screen.dart';
-import 'package:quote_app/view_model/bloc/quotes/quotes_cubit.dart';
-import 'package:quote_app/view_model/bloc/quotes/quotes_state.dart';
+
 
 import '../../model/navigation/navigation.dart';
 class HomeScreen extends StatelessWidget {
@@ -15,9 +14,9 @@ class HomeScreen extends StatelessWidget {
 
       body: SafeArea(
         child: Container(
-          padding: EdgeInsets.all(20).w,
+          padding: const EdgeInsets.all(20).w,
           width: double.infinity,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             color: Color(0xff6E9787),
           ),
           child: Column(
@@ -34,15 +33,15 @@ class HomeScreen extends StatelessWidget {
                 width: 170,
                 child: ElevatedButton(
                   onPressed: (){
-                    Navigation.push(context, QuotesScreen());
-                  }, child: Text('Begin',style: TextStyle(
+                    Navigation.push(context, const QuotesScreen());
+                  },style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.white,
+                  elevation: 20,
+                ), child: const Text('Begin',style: TextStyle(
                   color: Color(0xff6E9787),
                   fontFamily: 'Anime',
                   fontSize: 35,
-                )),style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.white,
-                  elevation: 20,
-                ),),
+                )),),
               ),
             ],
           ),

@@ -16,14 +16,14 @@ class QuoteWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 680.h,
-      padding: EdgeInsets.all(12).w,
+      padding: const EdgeInsets.all(12).w,
      decoration: BoxDecoration(
        color:Colors.primaries[Random().nextInt(Colors.primaries.length)].withOpacity(.3),
 
      ),
       child: Column(
         children: [
-
+         
           // Text('“',
           //     style: TextStyle(fontSize: 40.sp, fontWeight: FontWeight.bold,fontFamily: 'Anime',color: Colors.white,)),
           Expanded(
@@ -31,7 +31,15 @@ class QuoteWidget extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-
+                Row(
+                  children: [
+                    Image.asset('assets/images/Quotation-Symbol-PNG.png',
+                        height: 80,
+                        width: 80,
+                        alignment: AlignmentDirectional.topStart),
+                    const Expanded(child: SizedBox())
+                  ],
+                ),
                 Text(quote.body ?? '',
                   textAlign: TextAlign.center,
                     style: TextStyle(

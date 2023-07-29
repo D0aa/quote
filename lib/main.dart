@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:quote_app/view/screen/home_screen.dart';
-import 'package:quote_app/view/screen/quotes_screen.dart';
 import 'package:quote_app/view_model/bloc/quotes/quotes_cubit.dart';
 import 'package:quote_app/view_model/data/network/dio_helper.dart';
 
